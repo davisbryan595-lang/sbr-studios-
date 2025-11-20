@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* SBR Studio Dark Luxury Theme */
+  --background: oklch(0.06 0 0); /* Matte Black */
+  --foreground: oklch(0.98 0 0); /* White text */
+  --card: oklch(0.12 0 0); /* Dark background */
+  --card-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.85 0.18 35); /* Gold #D4AF37 */
+  --primary-foreground: oklch(0.06 0 0);
+  --secondary: oklch(0.32 0.16 15); /* Deep Red #8B0000 */
+  --secondary-foreground: oklch(0.98 0 0);
+  --accent: oklch(0.85 0.18 35); /* Gold accent */
+  --accent-foreground: oklch(0.06 0 0);
+  --destructive: oklch(0.32 0.16 15);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.2 0 0);
+  --input: oklch(0.12 0 0);
+  --ring: oklch(0.85 0.18 35);
+  --chart-1: oklch(0.85 0.18 35);
+  --chart-2: oklch(0.32 0.16 15);
+  --chart-3: oklch(0.85 0.18 35);
+  --chart-4: oklch(0.32 0.16 15);
+  --chart-5: oklch(0.85 0.18 35);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.06 0 0);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.85 0.18 35);
+  --sidebar-primary-foreground: oklch(0.06 0 0);
+  --sidebar-accent: oklch(0.32 0.16 15);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.2 0 0);
+  --sidebar-ring: oklch(0.85 0.18 35);
+}
+
+.dark {
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--background);
+  --color-popover-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: oklch(0.4 0 0);
+  --color-muted-foreground: oklch(0.75 0 0);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity;
+  }
+
+  .btn-red {
+    @apply px-8 py-3 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity;
+  }
+
+  /* Added rotating glow button styles */
+  .glow-button {
+    @apply relative px-8 py-3 font-semibold text-primary-foreground rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95;
+    background: linear-gradient(135deg, var(--primary), rgba(212, 175, 55, 0.8));
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .glow-button::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(from 0deg, var(--primary), rgba(139, 0, 0, 0.8), var(--primary));
+    border-radius: 0.625rem;
+    opacity: 0;
+    animation: rotateBorder 3s linear infinite;
+    z-index: -1;
+  }
+
+  .glow-button:hover::before {
+    opacity: 1;
+  }
+
+  .glow-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary), rgba(212, 175, 55, 0.8));
+    border-radius: 0.625rem;
+    z-index: -1;
+  }
+}
+
+@keyframes rotateBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
