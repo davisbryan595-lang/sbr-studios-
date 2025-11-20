@@ -12,7 +12,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: "url(/placeholder.svg?height=1080&width=1920&query=luxury%20beauty%20studio%20background)",
+            backgroundImage: "/sbr hero.jpg",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
