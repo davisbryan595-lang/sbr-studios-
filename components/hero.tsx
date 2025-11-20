@@ -19,6 +19,19 @@ export default function Hero() {
       </div>
 
       {/* Content */}
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl">
+        {/* Logo */}
+        <div className="mb-8 flex justify-center">
+          <Image
+            src="/images/sbrlogo.jpg"
+            alt="SBR Studio Suites Logo"
+            width={200}
+            height={200}
+            className="w-32 sm:w-40 h-auto drop-shadow-2xl"
+            priority
+          />
+        </div>
+
         {/* Tagline */}
         <h1 className="font-serif text-4xl sm:text-6xl font-bold mb-4 text-foreground">
           Elevate Your
