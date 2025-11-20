@@ -5,18 +5,18 @@ import Image from "next/image"
 import Lightbox from "./lightbox"
 
 const galleryItems = [
-  { id: 1, type: "image", src: "/images/fb-1.jpg", alt: "Transformation 1" },
-  { id: 2, type: "image", src: "/images/fb-2.jpg", alt: "Transformation 2" },
-  { id: 3, type: "video", src: "/images/fb-3.mp4", alt: "Reel 3" },
-  { id: 4, type: "image", src: "/images/fb-4.jpg", alt: "Before & After 4" },
-  { id: 5, type: "image", src: "/images/fb-5.jpg", alt: "Transformation 5" },
-  { id: 6, type: "video", src: "/images/fb-6.mp4", alt: "Reel 6" },
-  { id: 7, type: "image", src: "/images/fb-7.jpg", alt: "Transformation 7" },
-  { id: 8, type: "image", src: "/images/fb-8.jpg", alt: "Transformation 8" },
-  { id: 9, type: "video", src: "/images/fb-9.mp4", alt: "Reel 9" },
-  { id: 10, type: "image", src: "/images/fb-10.jpg", alt: "Transformation 10" },
-  { id: 11, type: "image", src: "/images/fb-11.jpg", alt: "Transformation 11" },
-  { id: 12, type: "image", src: "/images/fb-12.jpg", alt: "Transformation 12" },
+  { id: 1, type: "image", src: "/content/Hitube_Boz4rATRIX_2025_11_21_04_04_32.jpg", alt: "Transformation 1" },
+  { id: 2, type: "image", src: "/content/Hitube_MbxYtCYG10_2025_11_21_04_06_41.jpg", alt: "Transformation 2" },
+  { id: 3, type: "video", src: "/content/AQOH52z_4S-AYsTWmHiIBm_hxVk1RAaf87-5okJR2vEbrBN2WvsSpCTIe6UieMA4Gv-RO7NIwIQKJUfLt41A5h8Iyv5XHcvD2qgJY-U.mp4", alt: "Reel 3" },
+  { id: 4, type: "image", src: "/content/Hitube_SDckWIo2xZ_2025_11_21_04_06_43.jpg", alt: "Before & After 4" },
+  { id: 5, type: "image", src: "/content/Hitube_iSIpGkPoYc_2025_11_21_04_03_58.jpg", alt: "Transformation 5" },
+  { id: 6, type: "video", src: "/content/AQOo0jTv4z1hh_8xvxJnNcaAz9bPSOy0oX48h_5izJjkkhwi26uBrAN8O1yY3CRXD5T0o4ece1eTr2uE7PST9pgWcmX5G3HcScI.mp4", alt: "Reel 6" },
+  { id: 7, type: "image", src: "/content/Hitube_mfT6B2Ybag_2025_11_21_04_06_39.jpg", alt: "Transformation 7" },
+  { id: 8, type: "image", src: "/content/Hitube_pcNiCkHxYn_2025_11_21_04_06_42.jpg", alt: "Transformation 8" },
+  { id: 9, type: "video", src: "/content/AQP59sOUh5iKdWuNgaDQ6yZJ8W8LM_5-KDHmqILwhehb7q4W7mfmHgbvGc7ixAfyPw7631Qd2xGXnKzTDGuiRfFbYdcsba5Iy0ZfIIA.mp4", alt: "Reel 9" },
+  { id: 10, type: "image", src: "/content/Hitube_Boz4rATRIX_2025_11_21_04_04_32.jpg", alt: "Transformation 10" },
+  { id: 11, type: "image", src: "/content/Hitube_MbxYtCYG10_2025_11_21_04_06_41.jpg", alt: "Transformation 11" },
+  { id: 12, type: "image", src: "/content/Hitube_SDckWIo2xZ_2025_11_21_04_06_43.jpg", alt: "Transformation 12" },
 ]
 
 export default function Gallery() {
