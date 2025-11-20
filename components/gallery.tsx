@@ -57,7 +57,6 @@ export default function Gallery() {
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  {/* PLACEHOLDER: Replace /images/fb-${item.id}.mp4 with actual Facebook reel video */}
                 </>
               )}
             </div>
