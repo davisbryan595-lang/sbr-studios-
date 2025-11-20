@@ -44,12 +44,11 @@ export default function Gallery() {
               {item.type === "image" ? (
                 <>
                   <Image
-                    src={`/beauty-transformation-.jpg?height=400&width=400&query=beauty%20transformation%20${item.id}`}
+                    src={item.src}
                     alt={item.alt}
                     fill
                     className="object-cover group-hover:brightness-75 transition-all duration-300"
                   />
-                  {/* PLACEHOLDER: Replace /images/fb-${item.id}.jpg with actual Facebook image */}
                 </>
               ) : (
                 <>
