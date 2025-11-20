@@ -7,12 +7,11 @@ export default function Hero() {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Background with Placeholder */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card -z-10">
-        {/* PLACEHOLDER: Replace /placeholder.svg with your hero background image/video */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80" />
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: "url(/placeholder.svg?height=1080&width=1920&query=luxury%20beauty%20studio%20background)",
+            backgroundImage: "url(/sbrhero.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
