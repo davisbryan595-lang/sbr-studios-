@@ -23,7 +23,7 @@ export default function Gallery() {
   const [selectedItem, setSelectedItem] = useState(null)
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -47,6 +47,7 @@ export default function Gallery() {
                     src={item.src}
                     alt={item.alt}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:brightness-75 transition-all duration-300"
                   />
                 </>

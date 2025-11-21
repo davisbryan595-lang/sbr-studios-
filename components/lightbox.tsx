@@ -29,11 +29,12 @@ export default function Lightbox({ item, onClose }) {
         {/* Content */}
         {item.type === "image" ? (
           <Image
-            src={`/.jpg?key=eip0u&height=800&width=800&query=${item.alt}`}
+            src={item.src}
             alt={item.alt}
             width={800}
             height={800}
             className="w-full h-auto rounded-lg"
+            sizes="(max-width: 1024px) 100vw, 800px"
           />
         ) : (
           <div className="bg-black rounded-lg flex items-center justify-center aspect-video">
