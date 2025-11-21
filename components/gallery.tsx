@@ -47,6 +47,7 @@ export default function Gallery() {
                     src={item.src}
                     alt={item.alt}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:brightness-75 transition-all duration-300"
                   />
                 </>
